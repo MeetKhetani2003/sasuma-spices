@@ -2,11 +2,10 @@
 
 import Image from "next/image";
 import { ArrowUpRight } from "lucide-react";
-import { useProductModal } from "@/components/ProductModal";
+import Link from "next/link";
 import type { Product } from "@/data/products";
 
 export default function ProductCard({ product, index = 0 }: { product: Product; index?: number }) {
-  const { openProduct } = useProductModal();
   const isReversed = index % 2 === 1;
 
   return (
@@ -59,16 +58,15 @@ export default function ProductCard({ product, index = 0 }: { product: Product; 
           ))}
         </div>
 
-        <button
-          type="button"
-          onClick={() => openProduct(product.id)}
+        <Link
+          href={`/products/${product.id}`}
           className="group/btn mt-10 flex w-full cursor-pointer items-center justify-between rounded-xl bg-forest px-6 py-4 text-[12px] font-bold uppercase tracking-[0.2em] text-gold-light shadow-md transition-all duration-300 hover:bg-forest-950 hover:text-gold hover:shadow-xl sm:w-max sm:gap-12"
         >
           View Details
           <span className="grid size-8 place-items-center rounded-full bg-gold/20 text-gold transition-all duration-300 group-hover/btn:bg-gold group-hover/btn:text-forest-950">
             <ArrowUpRight className="size-4 transition-transform duration-300 group-hover/btn:-translate-y-0.5 group-hover/btn:translate-x-0.5" />
           </span>
-        </button>
+        </Link>
       </div>
     </article>
   );

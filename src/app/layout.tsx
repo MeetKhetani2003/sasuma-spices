@@ -4,7 +4,6 @@ import { Playfair_Display, Inter } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
-import { ProductModalProvider } from "@/components/ProductModal";
 import WhatsAppButton from "@/components/WhatsAppButton";
 
 const playfair = Playfair_Display({
@@ -40,12 +39,10 @@ export default function RootLayout({ children }: { children: ReactNode }) {
     <html lang="en" className={`${playfair.variable} ${inter.variable}`}>
       <body className="bg-ivory font-sans text-ink antialiased">
         <div className="page-grain" aria-hidden="true" />
-        <ProductModalProvider>
-          <Navbar />
-          <main>{children}</main>
-          <Footer />
-          <WhatsAppButton />
-        </ProductModalProvider>
+        <Navbar />
+        <main>{children}</main>
+        <Footer />
+        <WhatsAppButton />
       </body>
     </html>
   );
