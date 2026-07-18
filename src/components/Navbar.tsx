@@ -12,20 +12,13 @@ const NAV_LINKS = [
   { href: "/", label: "Home" },
   { href: "/about", label: "About Us" },
   { href: "/products", label: "Our Products" },
+  { href: "/gallery", label: "Gallery" },
   { href: "/contact", label: "Contact Us" },
 ];
 
 export default function Navbar() {
-  const [scrolled, setScrolled] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
   const pathname = usePathname();
-
-  useEffect(() => {
-    const onScroll = () => setScrolled(window.scrollY > 30);
-    onScroll();
-    window.addEventListener("scroll", onScroll, { passive: true });
-    return () => window.removeEventListener("scroll", onScroll);
-  }, []);
 
   useEffect(() => setMenuOpen(false), [pathname]);
 
@@ -36,40 +29,15 @@ export default function Navbar() {
     };
   }, [menuOpen]);
 
-  const solid = scrolled || menuOpen;
-
   return (
     <>
-      <header
-        className={`fixed inset-x-0 top-0 z-[80] transition-all duration-500 ${solid
-          ? "border-b border-forest/10 bg-ivory/85 shadow-[0_10px_40px_-18px_rgba(11,26,13,0.25)] backdrop-blur-xl"
-          : "border-b border-transparent bg-transparent"
-          }`}
-      >
-        <nav
-          className={`mx-auto flex max-w-7xl items-center justify-between px-5 transition-all duration-500 sm:px-8 ${solid ? "py-3" : "py-5"
-            }`}
-          aria-label="Primary navigation"
-        >
+      <header className="fixed inset-x-0 top-0 z-[80] border-b border-forest/10 bg-ivory/95 shadow-[0_10px_40px_-18px_rgba(11,26,13,0.25)] backdrop-blur-xl transition-all duration-500">
+        <nav className="mx-auto flex max-w-7xl items-center justify-between px-5 py-3 sm:px-8" aria-label="Primary navigation">
           {/* Logo */}
           <Link href="/" className="group flex items-center gap-3" aria-label="Shasuma Spices — Home">
-            {/* <div className="relative flex h-10 items-center justify-center">
-              <Logo className="h-full w-auto" />
-            </div> */}
-            <span className="leading-none">
-              <span
-                className={`block font-display text-[19px] font-bold tracking-[0.12em] transition-colors duration-500 ${solid ? "text-forest" : "text-ivory"
-                  }`}
-              >
-                SAASUMA <span className="text-gold">SPICES</span>
-              </span>
-              <span
-                className={`mt-1 block text-[13px] tracking-wide transition-colors duration-500 ${solid ? "text-forest-600" : "text-gold-light"
-                  }`}
-              >
-                Unjha Agent
-              </span>
-            </span>
+            <div className="relative flex h-12 items-center justify-center">
+              <Logo className="h-full w-auto" invert={false} />
+            </div>
           </Link>
 
           {/* Center links */}
@@ -81,8 +49,9 @@ export default function Navbar() {
                   <Link
                     href={link.href}
                     data-active={active}
-                    className={`link-luxe text-[13px] font-semibold tracking-[0.08em] transition-colors duration-500 ${solid ? "text-forest hover:text-forest-600" : "text-ivory/90 hover:text-ivory"
-                      } ${active ? (solid ? "text-forest" : "text-gold-light") : ""}`}
+                    className={`link-luxe text-[13px] font-semibold tracking-[0.08em] transition-colors duration-500 ${
+                      active ? "text-forest" : "text-forest/80 hover:text-forest"
+                    }`}
                   >
                     {link.label}
                   </Link>
@@ -95,10 +64,7 @@ export default function Navbar() {
           <div className="flex items-center gap-3">
             <Link
               href="/contact"
-              className={`hidden items-center gap-2 rounded-full px-6 py-2.5 text-[12px] font-bold uppercase tracking-[0.16em] transition-all duration-300 sm:inline-flex ${solid
-                ? "bg-crimson text-ivory shadow-[0_10px_30px_-10px_rgba(206,17,38,0.55)] hover:bg-crimson-dark hover:shadow-[0_14px_36px_-10px_rgba(206,17,38,0.7)]"
-                : "border border-gold/60 bg-gold/10 text-gold-light backdrop-blur hover:bg-gold hover:text-forest-950"
-                }`}
+              className="hidden items-center gap-2 rounded-full bg-crimson px-6 py-2.5 text-[12px] font-bold uppercase tracking-[0.16em] text-ivory shadow-[0_10px_30px_-10px_rgba(206,17,38,0.55)] transition-all duration-300 hover:bg-crimson-dark hover:shadow-[0_14px_36px_-10px_rgba(206,17,38,0.7)] sm:inline-flex"
             >
               Get a Quote
               <ArrowUpRight className="size-3.5 transition-transform duration-300 group-hover:translate-x-0.5" />
@@ -108,10 +74,7 @@ export default function Navbar() {
               onClick={() => setMenuOpen((v) => !v)}
               aria-label={menuOpen ? "Close menu" : "Open menu"}
               aria-expanded={menuOpen}
-              className={`grid size-10 cursor-pointer place-items-center rounded-full border transition-all duration-300 lg:hidden ${solid
-                ? "border-forest/20 text-forest hover:bg-forest hover:text-ivory"
-                : "border-ivory/30 text-ivory hover:bg-ivory hover:text-forest"
-                }`}
+              className="grid size-10 cursor-pointer place-items-center rounded-full border border-forest/20 text-forest transition-all duration-300 hover:bg-forest hover:text-ivory lg:hidden"
             >
               {menuOpen ? <X className="size-4.5" /> : <Menu className="size-4.5" />}
             </button>

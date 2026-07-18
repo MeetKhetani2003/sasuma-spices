@@ -44,7 +44,14 @@ export const products: Product[] = [
       { label: "Total Ash", value: "Max 9.5%" },
       { label: "Origin", value: "Unjha, Mehsana & Patan belt, Gujarat" },
     ],
-    grades: ["Singapore 99%", "Europe 99.5%", "Gulf 98%", "Machine-cleaned bold"],
+    grades: [
+      "Jeera Seeds (Singapore 99, Europe 99)",
+      "Jeera Crushing Quality",
+      "Jeera Patti",
+      "Jeera Roasted Patti",
+      "Jeera Dandi",
+      "Jeera Powder"
+    ],
     applications: ["Curry & masala blends", "Spice extractions", "Seasoning houses", "RTE food manufacturing"],
     packaging: ["25 kg PP bags", "50 kg jute bags", "Custom OEM packing on request"],
   },
@@ -72,7 +79,12 @@ export const products: Product[] = [
       { label: "Admixture", value: "Max 1%" },
       { label: "Origin", value: "Gujarat & Rajasthan mandi network" },
     ],
-    grades: ["Premium green", "Parrot green", "Eagle / bold", "Split-controlled"],
+    grades: [
+      "Dhaniya Seeds",
+      "Dhaniya Crushing",
+      "Dhaniya Patti",
+      "Dhaniya Powder"
+    ],
     applications: ["Dhana-jiru bases", "Pickle masalas", "Distilleries", "Curry powder mills"],
     packaging: ["25 kg PP bags", "50 kg jute bags", "Custom OEM packing on request"],
   },
@@ -100,7 +112,11 @@ export const products: Product[] = [
       { label: "Foreign Matter", value: "Nil dust & stone — sieved" },
       { label: "Origin", value: "Gujarat & Rajasthan belt" },
     ],
-    grades: ["Bold sorted", "Machine cleaned 99%", "Medicinal grade"],
+    grades: [
+      "Ajwain Seeds",
+      "Ajwain Patti",
+      "Ajwain Kani"
+    ],
     applications: ["Ayurvedic preparations", "Namkeen & bakery", "Tadka & tadka bases", "Digestive blends"],
     packaging: ["25 kg PP bags", "40 kg jute bags", "Custom OEM packing on request"],
   },
@@ -128,7 +144,11 @@ export const products: Product[] = [
       { label: "Seed Uniformity", value: "Min 95% uniform size" },
       { label: "Origin", value: "Unjha, Gujarat & Lucknow belts" },
     ],
-    grades: ["Lucknowi", "Gujarati Variyali", "Double-sorted bold"],
+    grades: [
+      "Souff Seeds",
+      "Souff Mamary",
+      "Souff Patti"
+    ],
     applications: ["Mukhwas manufacturing", "Confectionery", "Herbal infusions", "Culinary spice blends"],
     packaging: ["25 kg PP bags", "50 kg jute bags", "Custom OEM packing on request"],
   },

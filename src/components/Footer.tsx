@@ -30,15 +30,9 @@ export default function Footer() {
           {/* Brand */}
           <div>
             <Link href="/" className="flex items-center gap-3">
-              {/* <div className="relative flex h-12 items-center justify-center grayscale transition-all duration-500 group-hover:grayscale-0">
-                <Logo className="h-full w-auto" />
-              </div> */}
-              <span className="leading-none">
-                <span className="block font-display text-xl font-bold tracking-[0.12em]">
-                  SAASUMA <span className="text-gold">SPICES</span>
-                </span>
-                <span className="mt-1 block text-sm text-gold-light">Unjha</span>
-              </span>
+              <div className="relative flex h-12 items-center justify-center transition-all duration-500 opacity-80 group-hover:opacity-100">
+                <Logo className="h-full w-auto" invert />
+              </div>
             </Link>
             <p className="mt-6 max-w-sm text-[13.5px] leading-relaxed text-ivory/60">
               A legacy spice commission house operating from Unjha — the beating heart of Asia&apos;s
