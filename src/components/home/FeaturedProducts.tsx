@@ -10,17 +10,17 @@ export default function FeaturedProducts() {
       <div className="mx-auto max-w-7xl px-5 sm:px-8">
         <Reveal className="flex flex-col items-end justify-between gap-8 lg:flex-row">
           <div className="w-full">
-            <p className="eyebrow eyebrow-left text-gold-dark">The Curated Quartet</p>
+            <p className="eyebrow eyebrow-left text-gold-dark">The Curated Selection</p>
             <h2
               id="featured-title"
               className="mt-6 max-w-2xl font-display text-4xl font-semibold leading-[1.1] text-forest sm:text-5xl"
             >
-              Four Spices. <em className="italic text-gold-dark">Mastered Deeply,</em> Never Broadly.
+              Six Premium Spices. <em className="italic text-gold-dark">Mastered Deeply,</em> Never Broadly.
             </h2>
           </div>
           <div className="flex w-full flex-col gap-5 lg:w-auto">
             <p className="max-w-sm text-[14px] leading-relaxed text-moss lg:text-right">
-              We deliberately broker only four spice lines — so that every lot receives the
+              We deliberately broker only a select six spice lines — so that every lot receives the
               scrutiny a lesser catalogue simply cannot afford.
             </p>
             <Link

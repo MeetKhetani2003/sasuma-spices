@@ -152,6 +152,71 @@ export const products: Product[] = [
     applications: ["Mukhwas manufacturing", "Confectionery", "Herbal infusions", "Culinary spice blends"],
     packaging: ["25 kg PP bags", "50 kg jute bags", "Custom OEM packing on request"],
   },
+  {
+    id: "methi",
+    numeral: "V",
+    name: "Methi",
+    subtitle: "Fenugreek Seeds",
+
+    botanical: "Trigonella foenum-graecum",
+    image: "/images/product-methi.png",
+    tagline: "Bold, golden-yellow seeds yielding a complex, bitter-sweet aroma.",
+    short:
+      "Premium machine-cleaned and sortex Gujarat methi seeds with high purity and vibrant color.",
+    description:
+      "Sourced primarily from the major fenugreek-producing belts of Gujarat (like Mehsana and Banaskantha) and traded in the Unjha mandi. These bold, cuboid-shaped, golden-yellow seeds are prized for their characteristic bitter-sweet flavor, high extract values, and culinary depth.",
+    heritage:
+      "Methi demands careful post-harvest handling to retain its vibrant color and medicinal properties. Our lots are meticulously machine-cleaned or sortexed up to 99.9% purity to ensure they meet stringent export standards and maintain their characteristic aroma during transit.",
+    profile: ["Bitter-sweet", "Warm & nutty", "Earthy", "Highly aromatic"],
+    specs: [
+      { label: "Purity", value: "99% Machine Cleaned / 99.5% Sortex" },
+      { label: "Moisture", value: "Max 9%" },
+      { label: "Total Ash", value: "Max 9.5%" },
+      { label: "Admixture", value: "Max 1%" },
+      { label: "Seed Type", value: "Bold & uniform (Eagle Grade available)" },
+      { label: "Origin", value: "Gujarat & Rajasthan belt" },
+    ],
+    grades: [
+      "Methi Seeds (Machine Cleaned)",
+      "Methi Seeds (Sortex 99.5%)",
+      "Methi Bold (Eagle Quality)",
+      "Methi Powder"
+    ],
+    applications: ["Pickle masalas", "Curry powders", "Nutraceutical extracts", "Ayurvedic preparations"],
+    packaging: ["25 kg PP bags", "50 kg jute bags", "Custom OEM packing on request"],
+  },
+  {
+    id: "rai",
+    numeral: "VI",
+    name: "Rai",
+    subtitle: "Black Mustard Seeds",
+
+    botanical: "Brassica nigra",
+    image: "/images/product-rai.png",
+    tagline: "Tiny dark spheres that release an intense, pungent heat.",
+    short:
+      "Small, round, dark reddish-brown to black mustard seeds, delivering sharp pungency and high oil content.",
+    description:
+      "Traded prominently in the Unjha and Banaskantha belts, our black mustard seeds are meticulously sourced for their high oil content and pungent kick. These tiny, round seeds are essential for traditional Indian tempering (tadka) and are a vital ingredient in various global cuisines and preservative blends.",
+    heritage:
+      "Mustard seed quality relies heavily on low moisture and high purity to prevent mold and preserve pungency. We ensure rigorous cleaning, including sortex options, to maintain up to 99.5% purity, delivering a consistent and powerful aromatic punch in every batch.",
+    profile: ["Pungent", "Sharp heat", "Nutty (when roasted)", "Intense aroma"],
+    specs: [
+      { label: "Purity", value: "99% - 99.5% Sortex Cleaned" },
+      { label: "Moisture", value: "Max 8%" },
+      { label: "Oil Content", value: "30% - 42% (varies by origin)" },
+      { label: "Admixture", value: "Max 1%" },
+      { label: "Appearance", value: "Small, round, black to dark brown" },
+      { label: "Origin", value: "Gujarat (Banaskantha) & Rajasthan" },
+    ],
+    grades: [
+      "Black Mustard Seeds (Sortex 99.5%)",
+      "Black Mustard (Machine Cleaned)",
+      "Mustard Crushing Quality"
+    ],
+    applications: ["Tadka & tempering", "Pickling & preservatives", "Mustard oil extraction", "Spice blends"],
+    packaging: ["25 kg PP bags", "50 kg jute/PP bags", "Custom OEM packing on request"],
+  }
 ];
 
 export const getProduct = (id: string) => products.find((p) => p.id === id);
