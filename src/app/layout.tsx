@@ -19,6 +19,7 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://shasumaspices.in"),
   title: {
     default: "Shasuma Spices — Premium Spice Commission Agent · Unjha, Gujarat",
     template: "%s | Shasuma Spices",
