@@ -35,7 +35,7 @@ export default function Navbar() {
         <nav className="mx-auto flex max-w-7xl items-center justify-between px-5 py-3 sm:px-8" aria-label="Primary navigation">
           {/* Logo */}
           <Link href="/" className="group flex items-center gap-3" aria-label="Shasuma Spices — Home">
-            <div className="relative flex h-12 items-center justify-center">
+            <div className="relative flex h-20 items-center justify-center">
               <Logo className="h-full w-auto" invert={false} />
             </div>
           </Link>
@@ -49,9 +49,8 @@ export default function Navbar() {
                   <Link
                     href={link.href}
                     data-active={active}
-                    className={`link-luxe text-[13px] font-semibold tracking-[0.08em] transition-colors duration-500 ${
-                      active ? "text-forest" : "text-forest/80 hover:text-forest"
-                    }`}
+                    className={`link-luxe text-[13px] font-semibold tracking-[0.08em] transition-colors duration-500 ${active ? "text-forest" : "text-forest/80 hover:text-forest"
+                      }`}
                   >
                     {link.label}
                   </Link>
